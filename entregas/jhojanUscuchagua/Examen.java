@@ -27,7 +27,7 @@ class Examen {
         int RANGO_MENOR_ASIGNATURAS = 1;
 
         int numeroDeAsignaturas;
-        boolean RANGO_ACEPTADO_ASIGNATURAS  ;
+        boolean RANGO_ACEPTADO_ASIGNATURAS;
         do {
         System.out.println("¿En cuentas asignaturas esta matriculado el alumno?");
             numeroDeAsignaturas = scanner.nextInt();
@@ -41,8 +41,18 @@ class Examen {
         int AsignaturasSuspensas = 0;
         int NOTA_APROBATORIA= 5;
         for (int i = 1; i<=numeroDeAsignaturas; i++) {
+            int notasPorAsignatura;
+            int RANGO_MAYOR_NOTAS = 10;
+            int RANGO_MENOR_NOTAS = 0;
+            boolean RANGO_ACEPTADO_NOTAS ;
+            do {
+                System.out.println("¿Cuantos notas tiene en la asignatura" + i);
+                notasPorAsignatura = scanner.nextInt();
+        
+                    RANGO_ACEPTADO_NOTAS = (RANGO_MENOR_NOTAS <= notasPorAsignatura && notasPorAsignatura <= RANGO_MAYOR_NOTAS);
+                } while (!RANGO_ACEPTADO_NOTAS);
+                
             System.out.println("¿Cuantos notas tiene en la asignatura" + i);
-            int notasPorAsignatura = scanner.nextInt();
 
             if (notasPorAsignatura>=NOTA_APROBATORIA) {
                 AsignaturasAprobadas = AsignaturasAprobadas + 1;
