@@ -73,4 +73,4 @@ if(nota0 ==notaAsignada){
 nota01=6;
 
 String nota= nota0>nota01
-  ? " ES la nota mas alta" : "No lo es";
+  ? " ES la nota mas alta" : "Es la nota mas baja";
