@@ -2,7 +2,7 @@ import new.scanner // no recuerdo la sentencia de memoria
 //no recuerdo la estrcutura public state....
 
 System.out.println("Cual es la edad del usuario?");
-int edad=teclado.new(int);
+int edad=teclado.new(int); // no recuerdo la sentencia
 if(edad>=18){
 
     System.out.println("Es mayor de edad");
@@ -16,7 +16,7 @@ else{
 int filaPar= (int) (Math.random() * (99-16 +1)) +16;
 int filaImpar= (int) (Math.random()* (70-17 +1)) +17;
 
-if(edad==filaPar){
+if(edad=filaPar){
     System.out.println("ES par");
 }
 else{
@@ -32,11 +32,12 @@ while(asignaturas>=1 && asignaturas<=10){
 
     System.out.println("Tus asignaturas no estan entre 1 y 10");
 }
+System.out.println("Tus asignaturas si estan entre 1 y 10");
 
 System.out.println("Nota de la asignatura N: numerado desde 1");
 
-int nota=0;
-int nota1=9;
+int nota1=0;
+int nota2=9;
 double mediaNota= (double) nota+nota1/2;
 
 
@@ -87,4 +88,3 @@ String notaComparativa= nota0>nota01
 
     System.out.println("Recupera");
   }
-  
