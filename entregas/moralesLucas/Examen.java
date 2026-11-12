@@ -36,20 +36,25 @@ public class Examen {
         System.out.println("Numero de asignaturas: " + asignaturas);
 
         double suma = 0;
+        int aprobadas = 0;
 
         for (int i = 1; i <= asignaturas; i++) {
             System.out.print("Nota de la asignatura " + i + ": ");
             int nota = teclado.nextInt();
 
             suma = suma + nota;
+
+            if (nota >= 5) {
+                aprobadas++;
+            }
         }
 
         double media = suma / asignaturas;
 
         System.out.println("La media de las notas es: " + media);
+        System.out.println("Numero de asignaturas aprobadas: " + aprobadas);
 
         teclado.close();
     }
 }
-
 
