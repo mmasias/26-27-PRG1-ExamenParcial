@@ -4,6 +4,7 @@ class Examen {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Examen parcial");
+        System.out.println("Ingrese su edad:");
         int edadUsuario = scanner.nextInt();
 
         final int MAYORIA_DE_EDAD = 18;
@@ -35,7 +36,7 @@ class Examen {
             asignaturasAlumno = scanner.nextInt();
         }
 
-        int notaAsignaturaTotal = 0;
+        double notaAsignaturaTotal = 0;
         int notaEstaAsignatura = 0;
         double promedio = 0;
         int asignaturasAprobadas = 0;
