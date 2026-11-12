@@ -38,15 +38,22 @@ class Examen {
         int notaAsignaturaTotal = 0;
         int notaEstaAsignatura = 0;
         double promedio = 0;
+        int asignaturasAprobadas = 0;
+        final double NOTA_APROBADA = 5.0;
 
         for (int i = 0; i < asignaturasAlumno; i++) {
             System.out.println("Nota de la asignatura " + (i+1) +":");
             notaEstaAsignatura = scanner.nextInt();
             notaAsignaturaTotal = notaAsignaturaTotal + notaEstaAsignatura;
+            if(notaEstaAsignatura >= NOTA_APROBADA){
+                asignaturasAprobadas++;
+            }
         }
 
         promedio = (notaAsignaturaTotal/asignaturasAlumno);
         System.out.println("su promedio es: " + promedio);
-
+        System.out.println("Usted aprobó: " + asignaturasAprobadas + " asignaturas");
+        int asignaturasSuspensas = asignaturasAlumno - asignaturasAprobadas;
+        System.out.println("Usted suspendió " + asignaturasSuspensas + " asignaturas");
     }
 }
