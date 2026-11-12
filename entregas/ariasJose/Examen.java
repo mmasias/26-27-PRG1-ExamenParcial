@@ -70,12 +70,9 @@ class Examen {
         
         for (int i=0; i < numeroAsignaturas; i++) {
             
-            
-            System.out.println("Nota de la asignatura " + i + ":");
+            System.out.println("Nota de la nueva asignatura" + i + ":");
             int notaAsignatura = scanner.nextInt();
             if (notaAsignatura >= 0 && notaAsignatura <= 10 ) {
-                System.out.println("Nota de la asignatura " + i + ":");
-                notaAsignatura = scanner.nextInt();
                 if (notaMasAlta<notaAsignatura) {
                     notaMasAlta = notaAsignatura;
                 }
