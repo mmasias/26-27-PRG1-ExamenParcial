@@ -15,13 +15,7 @@ public class Examen {
             System.out.println("Es menor de edad");
         }
 
-        if (edadAlumno > 17) {
-            System.out.println("Es válida");
-        } else {
-            System.out.println("No es válida");
-        }
-
-        if (edadAlumno > 70) {
+        if (edadAlumno > 17 || edadAlumno > 70) {
             System.out.println("Es válida");
         } else {
             System.out.println("No es válida");
@@ -36,10 +30,18 @@ public class Examen {
             System.out.println("Cantidad de materias inválida");
         }
 
-        System.out.println("Dime las notas de cada asignatura") {
-            int notaAsignatura = scanner.nextInt();
-        }
+        System.out.println("Dime las notas de cada asignatura"); 
+        int notaAsignatura = scanner.nextInt();
         System.out.println("Nota de la asignatura 1: " + notaAsignatura);
+
+        double notaMedia = materiasMatriculadas / notaAsignatura;
+        System.out.println("Nota media: " + notaMedia);
+
+        if (notaMedia > 5) {
+            System.out.println("Materia aprobada");
+        } else {
+            System.out.println("Materia desaprobada");
+        }
 
     }
 }
