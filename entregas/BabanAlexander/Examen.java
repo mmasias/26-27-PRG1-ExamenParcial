@@ -13,8 +13,8 @@ else{
 }
 
 
-int filaPar= (int) (Math.random() * (99-16 +1)) -16;
-int filaImpar= (int) (Math.random()* (70-17 +1)) -17;
+int filaPar= (int) (Math.random() * (99-16 +1)) +16;
+int filaImpar= (int) (Math.random()* (70-17 +1)) +17;
 
 if(edad==filaPar){
     System.out.println("ES par");
@@ -39,3 +39,17 @@ int nota=0;
 int nota1=9;
 double mediaNota= (double) nota+nota1/2;
 
+
+
+
+
+
+
+
+int asignaturasAprobadas=0;
+asignaturasAprobadas= mediaNota>=5;
+if(asignatura == asignatura){
+
+    asignatura++;
+    System.out.println("Has aprobado"+ asignatura);
+}
