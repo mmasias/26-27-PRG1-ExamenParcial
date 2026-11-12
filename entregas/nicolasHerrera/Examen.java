@@ -11,21 +11,24 @@ public class Examen {
         Scanner scanner = new Scanner(System.in);
 
         // final int MAYOR_DE_EDAD = 18;
-        int minimo_edad = 17;
-        int maximo_edad = 70;
+        // int minimo_edad = 17;
+        // int maximo_edad = 70;
 
-        System.out.println("Dime tu edad:");
-        int edad = scanner.nextInt();
+        // System.out.println("Dime tu edad:");
+        // int edad = scanner.nextInt();
 
         // String ComprobadorEdad = (edad >= MAYOR_DE_EDAD) ? "Eres mayor de edad" : "Eres menor de edad";
         // System.out.println(ComprobadorEdad);20
 
-        while (minimo_edad <= edad && edad <= maximo_edad) {
-            System.out.println("Dime una ultimatu edad:");
-            edad = scanner.nextInt();
-            System.out.println("Tu edad está dentro del rango permitido.");
-            break;   
-        }
+        // while (minimo_edad <= edad && edad <= maximo_edad) {
+        //    System.out.println("Dime una ultimatu edad:");
+        //    edad = scanner.nextInt();
+        //    System.out.println("Tu edad está dentro del rango permitido.");
+        //    break;   
+        // }
+
+        System.out.println("Dime el número de asignaturas en el que estas:");
+        int numero_asignaturas = scanner.nextInt();
         
         scanner.close();
     }
