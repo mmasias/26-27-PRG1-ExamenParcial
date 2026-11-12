@@ -26,7 +26,16 @@ public class Examen {
             System.out.println("Es menor de edad");
         }
 
-        System.out.print("Introduce el número de asignaturas matriculadas: ");
-        int numeroAsignaturas = teclado.nextInt();
+        int numeroAsignaturas;
+
+        do {
+            System.out.print("Introduce el número de asignaturas matriculadas: ");
+            numeroAsignaturas = teclado.nextInt();
+
+            if (numeroAsignaturas < 1 || numeroAsignaturas > 10) {
+                System.out.println("Número de asignaturas no válido. Inténtalo de nuevo.");
+            }
+
+        } while (numeroAsignaturas < 1 || numeroAsignaturas > 10);
     }
 }
