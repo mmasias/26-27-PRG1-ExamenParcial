@@ -6,29 +6,29 @@ class Examen {
     public static void main(String args[]) {
 
         final int MAYOR_EDAD = 18;
+        final int MAX_MATERIAS = 10;
+        final int MIN_MATERIAS = 1;
         System.out.println("Examen parcial PRG1");
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Cual es tu edad?");
+        System.out.println("Cual es tu edad? ");
         int edad_usuario = sc.nextInt();
 
         if (edad_usuario > MAYOR_EDAD) {
             System.out.println("Eres mayor de edad!");
 
-        } else if  {
+        } else if (edad_usuario < MAYOR_EDAD) {
             System.out.println("Eres menor de edad...");
             System.out.println("Vuelve a introducir una edad valida...");
             int edad_corregida = sc.nextInt();
 
         }
-        while (edad_corregida < 16) {
-
-        }
 
         System.out.println("En cuantas materias estas inscrito?");
         int materias_inscritas = sc.nextInt();
+        int materias = materias_inscritas + 1;
         {
-            if (materias_inscritas < 0 || materias_inscritas > 10) {
+            if (materias_inscritas < MIN_MATERIAS || materias_inscritas > MAX_MATERIAS) {
                 System.out.println("Numero de materias invalidas");
 
             }
@@ -40,6 +40,10 @@ class Examen {
         double media_nota = materias_inscritas / nota_materia;
 
         System.out.println("La media de la materia es" + media_nota);
+
+        if (media_nota > 5) {
+            System.out.println("Las materias pasadas con 5 son:" + materias);
+        }
 
     }
 
