@@ -41,7 +41,7 @@ class Examen {
         int asignaturasAprobadas = 0;
         final double NOTA_APROBADA = 5.0;
         int notaMasAlta = 0;
-        int notaMasBaja = 0;
+        int notaMasBaja = 10;
 
         for (int i = 0; i < asignaturasAlumno; i++) {
             System.out.println("Nota de la asignatura " + (i+1) +":");
@@ -65,6 +65,12 @@ class Examen {
         }
 
         promedio = (notaAsignaturaTotal/asignaturasAlumno);
+        if (promedio >= NOTA_APROBADA && notaMasBaja >= NOTA_APROBADA){
+            System.out.println("Promociona");
+        }else{
+            System.out.println("Recupera");
+        }
+
         System.out.println("su promedio es: " + promedio);
         System.out.println("Usted aprobó: " + asignaturasAprobadas + " asignaturas");
         int asignaturasSuspensas = asignaturasAlumno - asignaturasAprobadas;
