@@ -6,7 +6,7 @@ public class Examen {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Examen parcial prg1");
+        System.out.println("Examen parcial PRG1");
 
         int edad;
 
@@ -37,5 +37,10 @@ public class Examen {
             }
 
         } while (numeroAsignaturas < 1 || numeroAsignaturas > 10);
+
+        for (int numero = 1; numero <= numeroAsignaturas; numero++) {
+            System.out.print("Nota de la asignatura " + numero + ": ");
+            int nota = teclado.nextInt();
+        }
     }
 }
