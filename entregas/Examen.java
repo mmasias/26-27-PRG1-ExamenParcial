@@ -35,6 +35,7 @@ class Examen {
         boolean notavalida = false;
         double notaalta = 0;
         double notabaja = 0;
+        boolean promociona = false;
         while (nnotas == nmatriculas){
             System.out.println("Introduzca la nota de la asignatura" + i + ":" );
             while (notavalida){
@@ -65,6 +66,11 @@ class Examen {
         System.out.println("has suspendido " suspensas + "asignaturas");
         System.out.println("la nota mas alta es: " + notaalta);
         System.out.println("La nota mas baja ha sido: " + notabaja);
-
+        if (media > 5 && notabaja > 4){
+            System.out.println("promociona");
+        }else{
+            System.out.println("recupera");
+        }
+        }
     }
 }
