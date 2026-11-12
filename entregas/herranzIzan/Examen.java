@@ -39,16 +39,22 @@ public class Examen {
         } while (numeroAsignaturas < 1 || numeroAsignaturas > 10);
 
         int sumaNotas = 0;
+        int asignaturasAprobadas = 0;
 
         for (int numero = 1; numero <= numeroAsignaturas; numero++) {
             System.out.print("Nota de la asignatura " + numero + ": ");
             int nota = teclado.nextInt();
 
             sumaNotas = sumaNotas + nota;
+
+            if (nota >= 5) {
+                asignaturasAprobadas++;
+            }
         }
 
         double media = (double) sumaNotas / numeroAsignaturas;
 
         System.out.println("La media de las notas es: " + media);
+        System.out.println("Asignaturas aprobadas: " + asignaturasAprobadas);
     }
 }
