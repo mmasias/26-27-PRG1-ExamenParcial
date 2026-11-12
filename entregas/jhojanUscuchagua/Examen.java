@@ -1,5 +1,6 @@
 
 import java.util.Scanner;
+import javax.print.attribute.standard.Media;
 
 class Examen {
 
@@ -37,9 +38,16 @@ class Examen {
             RANGO_ACEPTADO_ASIGNATURAS = (RANGO_MENOR_ASIGNATURAS <= numeroDeAsignaturas && numeroDeAsignaturas <= RANGO_MAYOR_ASIGNATURAS);
         } while (!RANGO_ACEPTADO_ASIGNATURAS); 
         
+        double MediaDeNotas;
+        double SumatoriaNotas= 0;
         for (int i = 1; i<=numeroDeAsignaturas; i++) {
             System.out.println("¿Cuantos notas tiene en la asignatura" + i);
             int notasPorAsignatura = scanner.nextInt();
+
+            SumatoriaNotas = SumatoriaNotas + notasPorAsignatura;
         }
+        MediaDeNotas = SumatoriaNotas/numeroDeAsignaturas;
+
+        System.out.println("la media de notas es:" + MediaDeNotas);
     }
 }
