@@ -24,5 +24,8 @@ class Examen {
         String comprobacionEdad = (edadAlumno >= MAYOR_EDAD) ? "Eres mayor de edad" : "Eres menor de edad";
 
         System.out.println(comprobacionEdad);
+
+        System.out.println("¿En cuentas asignaturas esta matriculado el alumno?");
+            int numeroDeAsignaturas = scanner.nextInt();
     }
 }
