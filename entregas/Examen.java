@@ -32,14 +32,21 @@ class Examen {
         int sumanotas = 0;
         int nnotas;
         int aprobadas;
+        int notavalida;
         while (nnotas == nmatriculas){
             System.out.println("Introduzca la nota de la asignatura" + i + ":" );
-            nota = sc();
-            sumanotas = sumanotas + nota;
-            nnotas = nnotas + 1;
-            if (nota > 5){
-                aprobadas = aprobadas + 1;
-            }
+            while (notavalida){
+                nota = sc();
+                if (nota <= 10 && nota > 0){
+                    sumanotas = sumanotas + nota;
+                    nnotas = nnotas + 1;
+                    if (nota > 5){
+                        aprobadas = aprobadas + 1;
+                }
+                }else{
+                    System.out.println("nota no valida");
+                }
+            }    
         }
         double media;
         media = sumanotas / nnotas;
