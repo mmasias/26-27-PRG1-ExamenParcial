@@ -49,7 +49,7 @@ class Examen {
         int asignaturasReprobadas = 0;
         
         for (int i=0; i < numeroAsignaturas; i++) {
-            System.out.println("Nota de la asignatura " + i + 1 + ":");
+            System.out.println("Nota de la asignatura " + (i + 1) + ":");
             int notaAsignatura = scanner.nextInt();
             sumaNotas = (double) sumaNotas + notaAsignatura;
             if (notaAsignatura >= 5) {
@@ -71,7 +71,7 @@ class Examen {
         for (int i=0; i < numeroAsignaturas; i++) {
             
             
-            System.out.println("Nota de la asignatura " + i + 1 + ":");
+            System.out.println("Nota de la asignatura " + i + ":");
             int notaAsignatura = scanner.nextInt();
             if (notaAsignatura >= 0 && notaAsignatura <= 10 ) {
                 System.out.println("Nota de la asignatura " + i + ":");
@@ -89,7 +89,11 @@ class Examen {
         System.out.println("Nota más alta: " + notaMasAlta);
         System.out.println("Nota más baja: " + notaMasBaja);
 
-
+        if (mediaNotas >= 5 && notaMasBaja > 4){
+            System.out.println("Promociona");
+        } else if (notaMasBaja < 4) {
+            System.out.println("Recupera");
+        }
 
     }
 }
