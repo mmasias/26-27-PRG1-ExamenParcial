@@ -36,5 +36,10 @@ public class Examen {
             System.out.println("Cantidad de materias inválida");
         }
 
+        System.out.println("Dime las notas de cada asignatura") {
+            int notaAsignatura = scanner.nextInt();
+        }
+        System.out.println("Nota de la asignatura 1: " + notaAsignatura);
+
     }
 }
