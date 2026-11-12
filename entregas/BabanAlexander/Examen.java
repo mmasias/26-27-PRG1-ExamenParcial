@@ -13,8 +13,8 @@ else{
 }
 
 
-double filaPar= (int) (Math.random() * (99-16 +1)) -16;
-double filaImpar= (int) (Math.random()* (70-17 +1)) -17;
+int filaPar= (int) (Math.random() * (99-16 +1)) -16;
+int filaImpar= (int) (Math.random()* (70-17 +1)) -17;
 
 if(edad==filaPar){
     System.out.println("ES par");
@@ -35,4 +35,7 @@ while(asignaturas>=1 && asignaturas<=10){
 
 System.out.println("Nota de la asignatura N: numerado desde 1");
 
+int nota=0;
+int nota1=9;
+double mediaNota= (double) nota+nota1/2;
 
