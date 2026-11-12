@@ -30,9 +30,16 @@ public class Examen {
             System.out.println("Cantidad de materias inválida");
         }
 
+
+        final int MINIMO_DE_NOTA = 0;
+        final int MAXIMO_DE_NOTA = 10;
         System.out.println("Dime las notas de cada asignatura"); 
         int notaAsignatura = scanner.nextInt();
         System.out.println("Nota de la asignatura 1: " + notaAsignatura);
+        if (notaAsignatura > MINIMO_DE_NOTA || notaAsignatura > MAXIMO_DE_NOTA) {
+            System.out.println("Nota inválida");
+        } 
+
 
 
         double notaMedia = materiasMatriculadas / notaAsignatura;
