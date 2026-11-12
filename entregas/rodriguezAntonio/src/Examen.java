@@ -25,7 +25,17 @@ class Examen {
 
         }
 
+        System.out.println("En cuantas materias estas inscrito?");
+        int materias_inscritas = sc.nextInt();
+        {
+            if (materias_inscritas < 0 || materias_inscritas > 10) {
+                System.out.println("Numero de materias invalidas");
+
+            }
+
+        }
+        System.out.println("Dame una nota por cada asignatura");
+
     }
 
-}
 }
