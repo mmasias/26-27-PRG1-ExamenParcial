@@ -35,6 +35,8 @@ public class Examen {
         }
         double sumaNotas = 0;
         int aprobadas = 0;
+        double notaMaxima = NOTA_MINIMA;
+
         for (int asignatura = 1; asignatura <= matriculas; asignatura++) {
             double notaAsignatura;
             boolean notaValida = false;
@@ -52,6 +54,9 @@ public class Examen {
             if (notaAsignatura >= APROBADO) {
                 aprobadas++;
             }
+            if (notaAsignatura > notaMaxima) {
+                notaMaxima = notaAsignatura;
+            }
         }
 
         double media = sumaNotas / matriculas;
@@ -60,6 +65,7 @@ public class Examen {
 
         int suspensas = matriculas - aprobadas;
         System.out.println("Asignaturas suspensas: " + suspensas);
+        System.out.println("La nota mas alta es: " + notaMaxima);
 
         scanner.close();
     }
