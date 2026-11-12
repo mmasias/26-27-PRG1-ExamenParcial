@@ -32,11 +32,21 @@ class Examen {
         final int ASIGNATURAS_MAX = 10;
         while (!(asignaturasAlumno >= ASIGNATURAS_MIN && asignaturasAlumno <= ASIGNATURAS_MAX)){
             System.out.println("Ingrese su cantidad de asignaturas nuevamente entre 1 y 10");
+            asignaturasAlumno = scanner.nextInt();
         }
 
-        int notaAsignatura = 0;
+        int notaAsignaturaTotal = 0;
+        int notaEstaAsignatura = 0;
+        double promedio = 0;
+
         for (int i = 0; i < asignaturasAlumno; i++) {
             System.out.println("Nota de la asignatura " + (i+1) +":");
+            notaEstaAsignatura = scanner.nextInt();
+            notaAsignaturaTotal = notaAsignaturaTotal + notaEstaAsignatura;
         }
+
+        promedio = (notaAsignaturaTotal/asignaturasAlumno);
+        System.out.println("su promedio es: " + promedio);
+
     }
 }
