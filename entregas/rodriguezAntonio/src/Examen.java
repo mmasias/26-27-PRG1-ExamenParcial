@@ -28,9 +28,7 @@ class Examen {
         System.out.println("Vuelve a introducir una edad valida");
         int edad_corregida = sc.nextInt();
 
-        while (edad_corregida <) {
-            System.out.println("En cuantas materias estas inscrito? (1)");
-        }
+        System.out.println("En cuantas materias estas inscrito? (1)");
         int materias_inscritas = sc.nextInt();
         int cant_mats = 1;
         {
