@@ -43,6 +43,13 @@ public class Examen {
             System.out.print("Nota de la asignatura " + i + ": ");
             int nota = teclado.nextInt();
 
+            while (nota < 0 || nota > 10) {
+                System.out.println("Nota no valida. Debe estar entre 0 y 10.");
+
+                System.out.print("Nota de la asignatura " + i + ": ");
+                nota = teclado.nextInt();
+            }
+
             suma = suma + nota;
 
             if (nota >= 5) {
