@@ -9,7 +9,14 @@ class Examen {
         System.out.println("¿Cuál es tu edad?");
         int edad = 0;
         edad = scanner.nextInt();
-        
+
+        Boolean esMayor;
+        if (edad >= 18) {
+            System.out.println("Es mayor de edad");
+        } else {
+            System.out.println("Es menor de edad");
+        }
+
 
     }
 }
