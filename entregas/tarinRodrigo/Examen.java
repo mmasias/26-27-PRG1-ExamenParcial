@@ -1,13 +1,16 @@
+
 import java.util.Scanner;
 
 public class Examen {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); 
+        Scanner scanner = new Scanner(System.in);
         final int MAYOR_DE_EDAD = 18;
         final int EDAD_MINIMA = 17;
         final int EDAD_MAXIMA = 70;
         final int ASIGNATURAS_MAX = 10;
         final int ASIGNATURAS_MIN = 1;
+        final int APROBADO = 5;
 
         System.out.println("Examen parcial PRG1");
 
@@ -20,7 +23,7 @@ public class Examen {
         }
 
         System.out.println(edad >= MAYOR_DE_EDAD ? "Es mayor de edad" : "Es menor de edad");
-        
+
         System.out.println("En cuantas asignaturas estas matriculado: ");
         int matriculas = scanner.nextInt();
 
@@ -28,11 +31,15 @@ public class Examen {
             System.out.println("No esta dentro del rango (1-10). Vuelve a intentar: ");
             matriculas = scanner.nextInt();
         }
-
+        double sumaNotas = 0;
         for (int i = 1; i <= matriculas; i++) {
             System.out.println("Nota de la asignatura " + i + ": ");
-            int notaAsignatura = scanner.nextInt();
+            double notaAsignatura = scanner.nextInt();
+            sumaNotas = sumaNotas + notaAsignatura;
         }
+        double media = sumaNotas / matriculas;
+        System.out.println("La media es: " + media);
+
         scanner.close();
     }
 }
