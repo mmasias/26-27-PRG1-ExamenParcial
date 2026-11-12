@@ -27,11 +27,19 @@ class Examen {
             if (nmatriculas < 1 && nmatriculas > 10){
                 matriculasvalidas = true;
         }
+        int i = 1;
+        int nota;
+        int sumanotas = 0;
+        int nnotas;
         while (nnotas == nmatriculas){
-            int i = 1;
             System.out.println("Introduzca la nota de la asignatura" + i + ":" );
-            sc();
+            nota = sc();
+            sumanotas = sumanotas + nota;
+            nnotas = nnotas + 1;
         }
-        
+        double media;
+        media = sumanotas / nnotas;
+        System.out.println("la media es: " + media);
+
     }
 }
