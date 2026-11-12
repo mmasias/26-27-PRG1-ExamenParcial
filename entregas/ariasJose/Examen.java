@@ -39,7 +39,7 @@ class Examen {
             System.out.println("En cuántas asignaturas estás matriculado?");
             numeroAsignaturas = scanner.nextInt();
 
-            if (numeroAsignaturas >= 1 || numeroAsignaturas <= 10) {
+            if (numeroAsignaturas >= 1 && numeroAsignaturas <= 10) {
                 cantidadAsignaturas = true;
             }
         }
@@ -65,10 +65,25 @@ class Examen {
         System.out.println("Media de notas: " + mediaNotas);
         System.out.println("Asignaturas aprobadas: " + asignaturasAprobadas);
         System.out.println("Asignaturas reprobadas: " + asignaturasReprobadas);
-
+        int notaMasAlta = 0;
         
+        for (int i=0; i < numeroAsignaturas; i++) {
+            
+            
+            System.out.println("Nota de la asignatura " + i + 1 + ":");
+            int notaAsignatura = scanner.nextInt();
+            if (notaAsignatura >= 0 && notaAsignatura <= 10 ) {
+                System.out.println("Nota de la asignatura " + i + 1 + ":");
+                notaAsignatura = scanner.nextInt();
+                if (notaMasAlta<notaAsignatura) {
+                    notaMasAlta = notaAsignatura;
+                }
+            } 
+            
+        }
 
-
+        System.out.println("Nota más alta: " + notaMasAlta);
+        
 
     }
 }
