@@ -28,6 +28,10 @@ public class Examen {
             System.out.println("No esta dentro del rango (1-10). Vuelve a intentar: ");
             matriculas = scanner.nextInt();
         }
+
+        for (int i = 1; i != matriculas; i++) {
+            System.out.println("Nota de la asignatura " + i + ": ");
+        }
         scanner.close();
     }
 }
