@@ -35,6 +35,11 @@ class Examen {
             numeroDeAsignaturas = scanner.nextInt();
 
             RANGO_ACEPTADO_ASIGNATURAS = (RANGO_MENOR_ASIGNATURAS <= numeroDeAsignaturas && numeroDeAsignaturas <= RANGO_MAYOR_ASIGNATURAS);
-        } while (!RANGO_ACEPTADO_ASIGNATURAS);   
+        } while (!RANGO_ACEPTADO_ASIGNATURAS); 
+        
+        for (int i = 1; i<=numeroDeAsignaturas; i++) {
+            System.out.println("¿Cuantos notas tiene en la asignatura" + i);
+            int notasPorAsignatura = scanner.nextInt();
+        }
     }
 }
