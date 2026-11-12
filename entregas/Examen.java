@@ -28,12 +28,13 @@ class Examen {
                 matriculasvalidas = true;
         }
         int i = 1;
-        int nota;
-        int sumanotas = 0;
+        double nota;
+        double sumanotas = 0;
         int nnotas;
         int aprobadas;
         boolean notavalida = false;
-        int notaalta = 0;
+        double notaalta = 0;
+        double notabaja = 0;
         while (nnotas == nmatriculas){
             System.out.println("Introduzca la nota de la asignatura" + i + ":" );
             while (notavalida){
@@ -44,6 +45,9 @@ class Examen {
                     notavalida = true;
                     if (nota > notaalta){
                         notaalta = nota;
+                    }
+                    if (nota < notabaja){
+                        notabaja = nota;
                     }
                     if (nota > 5){
                         aprobadas = aprobadas + 1;
@@ -60,6 +64,7 @@ class Examen {
         int suspensas = nnotas - aprobadas;
         System.out.println("has suspendido " suspensas + "asignaturas");
         System.out.println("la nota mas alta es: " + notaalta);
+        System.out.println("La nota mas baja ha sido: " + notabaja);
 
     }
 }
