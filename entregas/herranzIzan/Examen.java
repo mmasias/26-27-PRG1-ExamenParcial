@@ -6,10 +6,19 @@ public class Examen {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Examen parcial PRG1");
+        System.out.println("Examen parcial prg1");
 
-        System.out.print("Introduce tu edad: ");
-        int edad = teclado.nextInt();
+        int edad;
+
+        do {
+            System.out.print("Introduce tu edad: ");
+            edad = teclado.nextInt();
+
+            if (edad < 17 || edad > 70) {
+                System.out.println("Edad no válida. Inténtalo de nuevo.");
+            }
+
+        } while (edad < 17 || edad > 70);
 
         if (edad >= 18) {
             System.out.println("Es mayor de edad");
