@@ -6,21 +6,27 @@ class Examen {
         int edad;
         boolean opcionvalida = false;
         while(opcionvalida){
-        System.out.println("Introduzca su edad: ");
-        edad = sc();
-        if (edad < 18){
-            System.out.println("Es menor de edad");
-        }else{
-            System.out.println("Es mayor de edad");
-        }
-        if (edad < 99 && edad > 17){
-            opcionvalida = true;
-        }else{
-            System.out.println("opcion no valida");
+            System.out.println("Introduzca su edad: ");
+            edad = sc();
+            if (edad < 18){
+                System.out.println("Es menor de edad");
+            }else{
+                System.out.println("Es mayor de edad");
+            }
+            if (edad < 99 && edad > 17){
+                opcionvalida = true;
+            }else{
+                System.out.println("opcion no valida");
+            }
         }
         int nmatriculas;
-        System.out.println("En cuantas asignaturas te estas matriculando?");
-        nmatriculas = sc();
-    }
+        boolean matriculasvalidas = false;
+        while(matriculasvalidas)
+            System.out.println("En cuantas asignaturas te estas matriculando?");
+            nmatriculas = sc();
+            if (nmatriculas < 1 && nmatriculas > 10){
+                matriculasvalidas = true;
+        }
+        
     }
 }
