@@ -27,5 +27,11 @@ class Examen {
         int asignaturasAlumno;
         System.out.println("Ingrese la cantidad de asignaturas que está cursando:");
         asignaturasAlumno = scanner.nextInt();
+
+        final int ASIGNATURAS_MIN = 1;
+        final int ASIGNATURAS_MAX = 10;
+        while (!(asignaturasAlumno >= ASIGNATURAS_MIN && asignaturasAlumno <= ASIGNATURAS_MAX)){
+            System.out.println("Ingrese su cantidad de asignaturas nuevamente entre 1 y 10");
+        }
     }
 }
