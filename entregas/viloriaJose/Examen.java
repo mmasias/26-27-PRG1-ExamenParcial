@@ -24,5 +24,8 @@ class Examen {
             edadValida = edadUsuario >= 17 && edadUsuario <= 70;
         }
 
+        int asignaturasAlumno;
+        System.out.println("Ingrese la cantidad de asignaturas que está cursando:");
+        asignaturasAlumno = scanner.nextInt();
     }
 }
