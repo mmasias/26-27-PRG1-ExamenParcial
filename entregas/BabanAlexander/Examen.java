@@ -72,5 +72,19 @@ if(nota0 ==notaAsignada){
 }
 nota01=6;
 
-String nota= nota0>nota01
+String notaComparativa= nota0>nota01
   ? " ES la nota mas alta" : "Es la nota mas baja";
+  System.out.println("notaComparativa");
+
+
+  boolean promocioNa= mediaNota>=5 && nota01>4;
+  if(promocioNa=true){
+
+    System.out.println("No recupera");
+
+  }
+  else{
+
+    System.out.println("Recupera");
+  }
+  
