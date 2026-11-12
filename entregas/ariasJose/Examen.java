@@ -25,7 +25,7 @@ class Examen {
         while(edadValida == false) {
             System.out.println("Cuál es tu nueva edad?");
             nuevaEdad = scanner.nextInt();
-            if (nuevaEdad >= EDAD_MINIMA || nuevaEdad <= EDAD_MAXIMA) {
+            if (nuevaEdad >= EDAD_MINIMA && nuevaEdad <= EDAD_MAXIMA) {
                     edadValida = true;
             }
         } 
@@ -66,6 +66,7 @@ class Examen {
         System.out.println("Asignaturas aprobadas: " + asignaturasAprobadas);
         System.out.println("Asignaturas reprobadas: " + asignaturasReprobadas);
         int notaMasAlta = 0;
+        int notaMasBaja = 10;
         
         for (int i=0; i < numeroAsignaturas; i++) {
             
@@ -73,17 +74,22 @@ class Examen {
             System.out.println("Nota de la asignatura " + i + 1 + ":");
             int notaAsignatura = scanner.nextInt();
             if (notaAsignatura >= 0 && notaAsignatura <= 10 ) {
-                System.out.println("Nota de la asignatura " + i + 1 + ":");
+                System.out.println("Nota de la asignatura " + i + ":");
                 notaAsignatura = scanner.nextInt();
                 if (notaMasAlta<notaAsignatura) {
                     notaMasAlta = notaAsignatura;
+                }
+                if (notaMasBaja > notaAsignatura) {
+                    notaMasBaja = notaAsignatura;
                 }
             } 
             
         }
 
         System.out.println("Nota más alta: " + notaMasAlta);
-        
+        System.out.println("Nota más baja: " + notaMasBaja);
+
+
 
     }
 }
