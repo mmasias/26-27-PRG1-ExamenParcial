@@ -43,8 +43,18 @@ public class Examen {
         int asignaturasSuspensas = 0;
 
         for (int numero = 1; numero <= numeroAsignaturas; numero++) {
-            System.out.print("Nota de la asignatura " + numero + ": ");
-            int nota = teclado.nextInt();
+
+            int nota;
+
+            do {
+                System.out.print("Nota de la asignatura " + numero + ": ");
+                nota = teclado.nextInt();
+
+                if (nota < 0 || nota > 10) {
+                    System.out.println("Nota no válida. Introduce una nota entre 0 y 10.");
+                }
+
+            } while (nota < 0 || nota > 10);
 
             sumaNotas = sumaNotas + nota;
 
