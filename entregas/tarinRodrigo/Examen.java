@@ -29,8 +29,9 @@ public class Examen {
             matriculas = scanner.nextInt();
         }
 
-        for (int i = 1; i != matriculas; i++) {
+        for (int i = 1; i <= matriculas; i++) {
             System.out.println("Nota de la asignatura " + i + ": ");
+            int notaAsignatura = scanner.nextInt();
         }
         scanner.close();
     }
