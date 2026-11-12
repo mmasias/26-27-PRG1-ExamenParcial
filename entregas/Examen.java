@@ -45,6 +45,8 @@ class Examen {
         media = sumanotas / nnotas;
         System.out.println("la media es: " + media);
         System.out.println("has aprobado " + aprobadas + " asignaturas");
+        int suspensas = nnotas - aprobadas;
+        System.out.println("has suspendido " suspensas + "asignaturas");
 
     }
 }
