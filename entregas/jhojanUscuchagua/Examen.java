@@ -7,5 +7,10 @@ class Examen {
 
         System.out.println("¿Cual es la edad del alumno?");
         int edadAlumno = scanner.nextInt();
+
+        int MAYOR_EDAD = 18;
+        String comprobacionEdad = (edadAlumno>= MAYOR_EDAD) ? "Eres mayor de edad":"Eres menor de edad";
+
+        System.out.println(comprobacionEdad);
     }
 }
