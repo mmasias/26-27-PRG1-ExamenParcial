@@ -25,5 +25,8 @@ public class Examen {
         } else {
             System.out.println("Es menor de edad");
         }
+
+        System.out.print("Introduce el número de asignaturas matriculadas: ");
+        int numeroAsignaturas = teclado.nextInt();
     }
 }
