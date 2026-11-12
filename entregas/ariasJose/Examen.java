@@ -34,5 +34,15 @@ class Examen {
         System.out.println("En cuántas asignaturas estás matriculado?");
         numeroAsignaturas = scanner.nextInt();
 
+        Boolean cantidadAsignaturas = false;
+        while (cantidadAsignaturas == false) {
+            System.out.println("En cuántas asignaturas estás matriculado?");
+            numeroAsignaturas = scanner.nextInt();
+
+            if (numeroAsignaturas >= 1 || numeroAsignaturas <= 10) {
+                cantidadAsignaturas = true;
+            }
+        }
+
     }
 }
