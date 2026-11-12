@@ -48,8 +48,13 @@ double mediaNota= (double) nota+nota1/2;
 
 int asignaturasAprobadas=0;
 asignaturasAprobadas= mediaNota>=5;
-if(asignatura == asignatura){
+if(asignatura == asignaturasAprobadas){
 
-    asignatura++;
+    
     System.out.println("Has aprobado"+ asignatura);
+}
+else{
+
+System.out.println("Has suspendido"+ asignatura);
+
 }
