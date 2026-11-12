@@ -37,6 +37,10 @@ class Examen {
         System.out.println("Dame una nota por cada asignatura");
         int nota_materia = sc.nextInt();
 
+        double media_nota = materias_inscritas / nota_materia;
+
+        System.out.println("La media de la materia es" + media_nota);
+
     }
 
 }
