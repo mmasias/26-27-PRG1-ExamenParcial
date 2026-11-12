@@ -45,6 +45,9 @@ public class Examen {
         System.out.println("La media es: " + media);
         System.out.println("Asignaturas aprobadas: " + aprobadas);
 
+        int suspensas = matriculas - aprobadas;
+        System.out.println("Asignaturas suspensas: " + suspensas);
+
         scanner.close();
     }
 }
