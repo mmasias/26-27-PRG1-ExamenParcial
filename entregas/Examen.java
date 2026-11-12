@@ -31,15 +31,20 @@ class Examen {
         int nota;
         int sumanotas = 0;
         int nnotas;
+        int aprobadas;
         while (nnotas == nmatriculas){
             System.out.println("Introduzca la nota de la asignatura" + i + ":" );
             nota = sc();
             sumanotas = sumanotas + nota;
             nnotas = nnotas + 1;
+            if (nota > 5){
+                aprobadas = aprobadas + 1;
+            }
         }
         double media;
         media = sumanotas / nnotas;
         System.out.println("la media es: " + media);
+        System.out.println("has aprobado " + aprobadas + " asignaturas");
 
     }
 }
