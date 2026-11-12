@@ -27,5 +27,14 @@ public class Examen {
             System.out.println("No es válida");
         }
 
+        System.out.println("¿En cuántas materias está matriculado?");
+        int materiasMatriculadas = scanner.nextInt();
+
+        if (materiasMatriculadas > 1 || materiasMatriculadas < 10) {
+            System.out.println("Cantidad de materias válida");
+        } else {
+            System.out.println("Cantidad de materias inválida");
+        }
+
     }
 }
