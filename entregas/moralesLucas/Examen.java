@@ -35,6 +35,12 @@ public class Examen {
 
         System.out.println("Numero de asignaturas: " + asignaturas);
 
+        for (int i = 1; i <= asignaturas; i++) {
+            System.out.print("Nota de la asignatura " + i + ": ");
+            int nota = teclado.nextInt();
+        }
+
         teclado.close();
     }
 }
+
