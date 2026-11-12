@@ -11,6 +11,8 @@ public class Examen {
         final int ASIGNATURAS_MAX = 10;
         final int ASIGNATURAS_MIN = 1;
         final int APROBADO = 5;
+        final double NOTA_MINIMA = 0.0;
+        final double NOTA_MAXIMA = 10.0;
 
         System.out.println("Examen parcial PRG1");
 
@@ -33,14 +35,25 @@ public class Examen {
         }
         double sumaNotas = 0;
         int aprobadas = 0;
-        for (int i = 1; i <= matriculas; i++) {
-            System.out.println("Nota de la asignatura " + i + ": ");
-            double notaAsignatura = scanner.nextInt();
+        for (int asignatura = 1; asignatura <= matriculas; asignatura++) {
+            double notaAsignatura;
+            boolean notaValida = false;
+
+            do {
+                System.out.println("Nota de la asignatura " + asignatura + ": ");
+                notaAsignatura = scanner.nextDouble();
+                notaValida = notaAsignatura >= NOTA_MINIMA && notaAsignatura <= NOTA_MAXIMA;
+                if (!notaValida) {
+                    System.out.println("No es valido, vuelve a intentar.");
+                }
+            } while (!notaValida);
+
             sumaNotas = sumaNotas + notaAsignatura;
             if (notaAsignatura >= APROBADO) {
                 aprobadas++;
             }
         }
+
         double media = sumaNotas / matriculas;
         System.out.println("La media es: " + media);
         System.out.println("Asignaturas aprobadas: " + aprobadas);
