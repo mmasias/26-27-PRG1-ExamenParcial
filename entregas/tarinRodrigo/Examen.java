@@ -32,13 +32,18 @@ public class Examen {
             matriculas = scanner.nextInt();
         }
         double sumaNotas = 0;
+        int aprobadas = 0;
         for (int i = 1; i <= matriculas; i++) {
             System.out.println("Nota de la asignatura " + i + ": ");
             double notaAsignatura = scanner.nextInt();
             sumaNotas = sumaNotas + notaAsignatura;
+            if (notaAsignatura >= APROBADO) {
+                aprobadas++;
+            }
         }
         double media = sumaNotas / matriculas;
         System.out.println("La media es: " + media);
+        System.out.println("Asignaturas aprobadas: " + aprobadas);
 
         scanner.close();
     }
