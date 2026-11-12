@@ -15,9 +15,17 @@ class Examen {
         if (edad_usuario > MAYOR_EDAD) {
             System.out.println("Eres mayor de edad!");
 
-        } else {
+        } else if  {
             System.out.println("Eres menor de edad...");
+            System.out.println("Vuelve a introducir una edad valida...");
+            int edad_corregida = sc.nextInt();
+
+        }
+        while (edad_corregida < 16) {
+
         }
 
     }
+
+}
 }
