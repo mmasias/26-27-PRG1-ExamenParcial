@@ -29,7 +29,7 @@ class Examen {
 
         System.out.println("En cuantas materias estas inscrito? (1)");
         int materias_inscritas = sc.nextInt();
-        int cant_mats = materias_inscritas + 1;
+        int cant_mats = 1;
         {
             if (materias_inscritas < MIN_MATERIAS || materias_inscritas > MAX_MATERIAS) {
                 System.out.println("Numero de materias invalidas");
@@ -37,22 +37,25 @@ class Examen {
             }
 
         }
-        System.out.println("Dame una nota por cada asignatura");
+        System.out.println("Dame una nota por la asignatura");
         int nota_materia = sc.nextInt();
 
-        double media_nota = materias_inscritas / nota_materia;
+        double media_nota = nota_materia / materias_inscritas;
 
         System.out.println("La media de la materia es " + media_nota);
 
         if (media_nota > 5) {
-            System.out.println("Las materias pasadas con 5 son:" + cant_mats);
+            System.out.println("Las materias pasadas con 5 son: " + cant_mats);
         } else if (media_nota < 5) {
-            System.out.println("La cantidad de materias reprobadas son" + cant_mats);
+            System.out.println("La cantidad de materias reprobadas son " + cant_mats);
         } else if (nota_materia < NOTA_MIN || nota_materia > NOTA_MAX) {
             System.out.println("Numero de materias invalidas...");
 
         }
 
+        System.out.println("La nota mas alta es: " + nota_materia);
+
+        System.out.println("La nota mas baja es: " + nota_materia);
     }
 
 }
