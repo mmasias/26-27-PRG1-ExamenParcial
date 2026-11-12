@@ -43,6 +43,7 @@ public class Examen {
         int asignaturasSuspensas = 0;
         int notaMasAlta = 0;
         int notaMasBaja = 10;
+        boolean tieneNotaMenorCuatro = false;
 
         for (int numero = 1; numero <= numeroAsignaturas; numero++) {
 
@@ -73,6 +74,10 @@ public class Examen {
             if (nota < notaMasBaja) {
                 notaMasBaja = nota;
             }
+
+            if (nota < 4) {
+                tieneNotaMenorCuatro = true;
+            }
         }
 
         double media = (double) sumaNotas / numeroAsignaturas;
@@ -82,5 +87,11 @@ public class Examen {
         System.out.println("Asignaturas suspensas: " + asignaturasSuspensas);
         System.out.println("La nota más alta es: " + notaMasAlta);
         System.out.println("La nota más baja es: " + notaMasBaja);
+
+        if (media >= 5 && !tieneNotaMenorCuatro) {
+            System.out.println("Promociona");
+        } else {
+            System.out.println("Recupera");
+        }
     }
 }
