@@ -48,5 +48,9 @@ public class Examen {
             System.out.println("La nota de la asignatura " + i + " es: " + nota_de_asignatura);
         }
         System.out.println("El promedio de las notas es: " + (nota_de_asignatura / numero_asignaturas));
+
+        // Asignaturas aprobadas con notas de 5 o mas
+        int asignaturas_aprobadas = 0;
+
     }
 }
