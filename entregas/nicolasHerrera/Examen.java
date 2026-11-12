@@ -37,16 +37,16 @@ public class Examen {
             System.out.println("Dime otra vez el número de asignaturas en el que estas:");
             numero_asignaturas = scanner.nextInt();
             System.out.println("Tu número de asignaturas está dentro del rango permitido.");
-            break;   
+            break;
         }
-
-        scanner.close();
 
         int nota_de_asignatura = 0;
 
-        do {
-            System.out.println("Nota de la asignatura N:");
+        for (int i = 1; i <= numero_asignaturas; i++) {
+            System.out.println("Dime la nota de la asignatura " + i + ":");
             nota_de_asignatura = scanner.nextInt();
+            System.out.println("La nota de la asignatura " + i + " es: " + nota_de_asignatura);
         }
+        System.out.println("El promedio de las notas es: " + (nota_de_asignatura / numero_asignaturas));
     }
 }
