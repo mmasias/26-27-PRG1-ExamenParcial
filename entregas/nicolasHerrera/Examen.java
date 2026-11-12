@@ -29,7 +29,17 @@ public class Examen {
 
         System.out.println("Dime el número de asignaturas en el que estas:");
         int numero_asignaturas = scanner.nextInt();
-        
+
+        int minimo_asignaturas = 1;
+        int maximo_asignaturas = 10;
+
+        while (minimo_asignaturas <= numero_asignaturas && numero_asignaturas <= maximo_asignaturas) {
+            System.out.println("Dime otra vez el número de asignaturas en el que estas:");
+            numero_asignaturas = scanner.nextInt();
+            System.out.println("Tu número de asignaturas está dentro del rango permitido.");
+            break;   
+        }
+
         scanner.close();
     }
 }
