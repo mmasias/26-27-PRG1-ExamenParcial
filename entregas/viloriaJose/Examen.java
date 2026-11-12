@@ -44,6 +44,10 @@ class Examen {
         for (int i = 0; i < asignaturasAlumno; i++) {
             System.out.println("Nota de la asignatura " + (i+1) +":");
             notaEstaAsignatura = scanner.nextInt();
+            while (!(notaEstaAsignatura >= 1 && notaEstaAsignatura <= 10)){
+                System.out.println("Ingrese nuevamente su nota de la asignatura dentro del rango (1 a 10):");
+                notaEstaAsignatura = scanner.nextInt();
+            }
             notaAsignaturaTotal = notaAsignaturaTotal + notaEstaAsignatura;
             if(notaEstaAsignatura >= NOTA_APROBADA){
                 asignaturasAprobadas++;
