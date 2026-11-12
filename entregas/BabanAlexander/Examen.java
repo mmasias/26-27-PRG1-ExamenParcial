@@ -68,5 +68,9 @@ int nota0=9
 notaAsignada=  (int)(Math.random() * ( 10-0 +1 )) +0;
 if(nota0 ==notaAsignada){
 
-   Ssytem.out.println("tu nota esta en el rango"); 
+   System.out.println("tu nota esta en el rango"); 
 }
+nota01=6;
+
+String nota= nota0>nota01
+  ? " ES la nota mas alta" : "No lo es";
