@@ -44,10 +44,21 @@ class Examen {
             }
         }
 
+        double sumaNotas = 0;
         for (int i=0; i < numeroAsignaturas; i++) {
             System.out.println("Nota de la asignatura " + i + ":");
             int notaAsignatura = scanner.nextInt();
+            sumaNotas = (double) sumaNotas + notaAsignatura;
         }
+
+        double mediaNotas;
+
+        mediaNotas = sumaNotas / numeroAsignaturas;
+        System.out.println("Media de notas: " + mediaNotas);
+
+    
+
+
 
     }
 }
