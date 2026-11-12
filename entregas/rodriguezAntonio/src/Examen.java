@@ -56,6 +56,7 @@ class Examen {
         System.out.println("La nota mas alta es: " + nota_materia);
 
         System.out.println("La nota mas baja es: " + nota_materia);
+        //se muestra la nota mas baja
     }
 
 }
