@@ -31,7 +31,7 @@ class Examen {
         double nota;
         double sumanotas = 0;
         int nnotas;
-        int aprobadas;
+        int aprobadas = 0;
         boolean notavalida = false;
         double notaalta = 0;
         double notabaja = 0;
@@ -63,7 +63,7 @@ class Examen {
         System.out.println("la media es: " + media);
         System.out.println("has aprobado " + aprobadas + " asignaturas");
         int suspensas = nnotas - aprobadas;
-        System.out.println("has suspendido " suspensas + "asignaturas");
+        System.out.println("has suspendido " + suspensas + "asignaturas");
         System.out.println("la nota mas alta es: " + notaalta);
         System.out.println("La nota mas baja ha sido: " + notabaja);
         if (media > 5 && notabaja > 4){
@@ -73,4 +73,3 @@ class Examen {
         }
         }
     }
-}
