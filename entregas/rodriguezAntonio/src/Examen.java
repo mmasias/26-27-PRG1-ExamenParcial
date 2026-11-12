@@ -6,6 +6,8 @@ class Examen {
 
     public static void main(String args[]) {
 
+        final int NOTA_MIN = 0;
+        final int NOTA_MAX = 10;
         final int MAYOR_EDAD = 18;
         final int MAX_MATERIAS = 10;
         final int MIN_MATERIAS = 1;
@@ -46,6 +48,9 @@ class Examen {
             System.out.println("Las materias pasadas con 5 son:" + cant_mats);
         } else if (media_nota < 5) {
             System.out.println("La cantidad de materias reprobadas son" + cant_mats);
+        } else if (nota_materia < NOTA_MIN || nota_materia > NOTA_MAX) {
+            System.out.println("Numero de materias invalidas...");
+
         }
 
     }
