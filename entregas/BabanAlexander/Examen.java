@@ -25,6 +25,10 @@ else{
 }
 
 
-int asignatTuras=0;
-System.out.println("En cuentas asignaturas estas matriculado?");
 
+System.out.println("En cuentas asignaturas estas matriculado?");
+int asignaturas=(int) (Math.random() * (10-1 +1) +1)
+while(asignaturas>=1 && asignaturas<=10){
+
+    System.out.println("Tus asignaturas no estan entre 1 y 10");
+}
