@@ -1,3 +1,4 @@
+//hecho pensado en q el usuario no es cabron
 
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ class Examen {
         System.out.println("Examen parcial PRG1");
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Cual es tu edad? ");
+        System.out.println("Cual es tu edad? (17-70) ");
         int edad_usuario = sc.nextInt();
 
         if (edad_usuario > MAYOR_EDAD) {
@@ -24,9 +25,9 @@ class Examen {
 
         }
 
-        System.out.println("En cuantas materias estas inscrito?");
+        System.out.println("En cuantas materias estas inscrito? (1)");
         int materias_inscritas = sc.nextInt();
-        int materias = materias_inscritas + 1;
+        int cant_mats = materias_inscritas + 1;
         {
             if (materias_inscritas < MIN_MATERIAS || materias_inscritas > MAX_MATERIAS) {
                 System.out.println("Numero de materias invalidas");
@@ -39,10 +40,12 @@ class Examen {
 
         double media_nota = materias_inscritas / nota_materia;
 
-        System.out.println("La media de la materia es" + media_nota);
+        System.out.println("La media de la materia es " + media_nota);
 
         if (media_nota > 5) {
-            System.out.println("Las materias pasadas con 5 son:" + materias);
+            System.out.println("Las materias pasadas con 5 son:" + cant_mats);
+        } else if (media_nota < 5) {
+            System.out.println("La cantidad de materias reprobadas son" + cant_mats);
         }
 
     }
