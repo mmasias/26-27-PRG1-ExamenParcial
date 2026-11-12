@@ -33,5 +33,10 @@ class Examen {
         while (!(asignaturasAlumno >= ASIGNATURAS_MIN && asignaturasAlumno <= ASIGNATURAS_MAX)){
             System.out.println("Ingrese su cantidad de asignaturas nuevamente entre 1 y 10");
         }
+
+        int notaAsignatura = 0;
+        for (int i = 0; i < asignaturasAlumno; i++) {
+            System.out.println("Nota de la asignatura " + (i+1) +":");
+        }
     }
 }
