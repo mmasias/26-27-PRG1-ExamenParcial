@@ -14,5 +14,18 @@ public class Examen {
         } else {
             System.out.println("Es menor de edad");
         }
+
+        if (edadAlumno > 17) {
+            System.out.println("Es válida");
+        } else {
+            System.out.println("No es válida");
+        }
+
+        if (edadAlumno > 70) {
+            System.out.println("Es válida");
+        } else {
+            System.out.println("No es válida");
+        }
+
     }
 }
