@@ -32,3 +32,7 @@ while(asignaturas>=1 && asignaturas<=10){
 
     System.out.println("Tus asignaturas no estan entre 1 y 10");
 }
+
+System.out.println("Nota de la asignatura N: numerado desde 1");
+
+
