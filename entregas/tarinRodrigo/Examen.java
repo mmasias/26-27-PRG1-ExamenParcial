@@ -13,6 +13,7 @@ public class Examen {
         final int APROBADO = 5;
         final double NOTA_MINIMA = 0.0;
         final double NOTA_MAXIMA = 10.0;
+        final double NOTA_MINIMA_PROMOCION = 4.0;
 
         System.out.println("Examen parcial PRG1");
 
@@ -71,6 +72,9 @@ public class Examen {
         System.out.println("Asignaturas suspensas: " + suspensas);
         System.out.println("La nota mas alta es: " + notaMaxima);
         System.out.println("La nota mas baja es: " + notaMinima);
+
+        boolean promociona = media >= APROBADO && notaMinima >= NOTA_MINIMA_PROMOCION;
+        System.out.println(promociona ? "Promociona" : "Recupera");
 
         scanner.close();
     }
