@@ -30,7 +30,7 @@ class Examen {
         int i = 1;
         double nota;
         double sumanotas = 0;
-        int nnotas;
+        int nnotas = 0;
         int aprobadas = 0;
         boolean notavalida = false;
         double notaalta = 0;
