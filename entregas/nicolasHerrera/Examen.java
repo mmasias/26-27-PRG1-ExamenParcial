@@ -27,31 +27,43 @@ public class Examen {
         //    break;   
         // }
 
-        System.out.println("Dime el número de asignaturas en el que estas:");
+        System.out.println("Dime el número de asignaturas que tienes:");
         int numero_asignaturas = scanner.nextInt();
 
         int minimo_asignaturas = 1;
         int maximo_asignaturas = 10;
 
-        while (minimo_asignaturas <= numero_asignaturas && numero_asignaturas <= maximo_asignaturas) {
-            System.out.println("Dime otra vez el número de asignaturas en el que estas:");
+        while (numero_asignaturas < minimo_asignaturas || numero_asignaturas > maximo_asignaturas) {
+            System.out.println("Número no válido (debe ser entre 1 y 10). Dime otra vez el número de asignaturas:");
             numero_asignaturas = scanner.nextInt();
-            System.out.println("Tu número de asignaturas está dentro del rango permitido.");
-            break;
         }
+        System.out.println("Tu número de asignaturas está dentro del rango permitido.");
 
-        int nota_de_asignatura = 0;
 
-        for (int i = 1; i <= numero_asignaturas; i++) {
-            System.out.println("Dime la nota de la asignatura " + i + ":");
-            nota_de_asignatura = scanner.nextInt();
-            System.out.println("La nota de la asignatura " + i + " es: " + nota_de_asignatura);
-        }
-        System.out.println("El promedio de las notas es: " + (nota_de_asignatura / numero_asignaturas));
-
-        // Asignaturas aprobadas con notas de 5 o mas
+        double suma_notas = 0;
         int asignaturas_aprobadas = 0;
         int asignaturas_desaprobadas = 0;
 
+        for (int i = 1; i <= numero_asignaturas; i++) {
+            System.out.println("Dime la nota de la asignatura " + i + ":");
+            double nota_de_asignatura = scanner.nextDouble();
+            System.out.println("La nota de la asignatura " + i + " es: " + nota_de_asignatura);
+
+            suma_notas += nota_de_asignatura;
+            if (nota_de_asignatura >= 5) {
+                asignaturas_aprobadas++;
+            } else {
+                asignaturas_desaprobadas++;
+            }
+        }
+
+        double promedio = suma_notas / numero_asignaturas;
+
+        System.out.println("--- RESULTADOS ---");
+        System.out.println("El promedio de las notas es: " + promedio);
+        System.out.println("Asignaturas aprobadas: " + asignaturas_aprobadas);
+        System.out.println("Asignaturas desaprobadas: " + asignaturas_desaprobadas);
     }
 }
+
+
