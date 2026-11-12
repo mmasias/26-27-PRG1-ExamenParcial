@@ -40,6 +40,7 @@ class Examen {
         double promedio = 0;
         int asignaturasAprobadas = 0;
         final double NOTA_APROBADA = 5.0;
+        int notaMasAlta = 0;
 
         for (int i = 0; i < asignaturasAlumno; i++) {
             System.out.println("Nota de la asignatura " + (i+1) +":");
@@ -52,6 +53,10 @@ class Examen {
             if(notaEstaAsignatura >= NOTA_APROBADA){
                 asignaturasAprobadas++;
             }
+
+            if (notaEstaAsignatura >= notaMasAlta){
+                notaMasAlta = notaEstaAsignatura;
+            }
         }
 
         promedio = (notaAsignaturaTotal/asignaturasAlumno);
@@ -59,5 +64,6 @@ class Examen {
         System.out.println("Usted aprobó: " + asignaturasAprobadas + " asignaturas");
         int asignaturasSuspensas = asignaturasAlumno - asignaturasAprobadas;
         System.out.println("Usted suspendió " + asignaturasSuspensas + " asignaturas");
+        System.out.println("La nota más alta es: " + notaMasAlta);
     }
 }
