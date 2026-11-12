@@ -58,3 +58,15 @@ else{
 System.out.println("Has suspendido"+ asignatura);
 
 }
+
+
+
+
+
+System.out.printlnln("Diem tu nota entre 0 y 10")
+int nota0=9
+notaAsignada=  (int)(Math.random() * ( 10-0 +1 )) +0;
+if(nota0 ==notaAsignada){
+
+   Ssytem.out.println("tu nota esta en el rango"); 
+}
