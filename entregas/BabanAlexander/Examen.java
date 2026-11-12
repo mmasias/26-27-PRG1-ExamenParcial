@@ -1,4 +1,5 @@
 import new.scanner // no recuerdo la sentencia de memoria
+//no recuerdo la estrcutura public state....
 
 System.out.println("Cual es la edad del usuario?");
 int edad=teclado.new(int);
@@ -13,7 +14,7 @@ else{
 
 
 double filaPar= (int) (Math.random() * (99-16 +1)) -16;
-double fila impar= (int) (Math.random()* (70-17 +1)) -17;
+double filaImpar= (int) (Math.random()* (70-17 +1)) -17;
 
 if(edad==filaPar){
     System.out.println("ES par");
@@ -22,3 +23,8 @@ else{
 
      System.out.println("ES impar");
 }
+
+
+int asignatTuras=0;
+System.out.println("En cuentas asignaturas estas matriculado?");
+
