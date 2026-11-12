@@ -35,6 +35,7 @@ class Examen {
 
         }
         System.out.println("Dame una nota por cada asignatura");
+        //paso 8
 
     }
 
