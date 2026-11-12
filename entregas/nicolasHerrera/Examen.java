@@ -41,5 +41,12 @@ public class Examen {
         }
 
         scanner.close();
+
+        int nota_de_asignatura = 0;
+
+        do {
+            System.out.println("Nota de la asignatura N:");
+            nota_de_asignatura = scanner.nextInt();
+        }
     }
 }
