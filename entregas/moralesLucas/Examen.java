@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Examen {
     public static void main(String[] args) {
@@ -10,7 +11,6 @@ public class Examen {
 
         while (edad < 16 || edad > 99) {
             System.out.println("Edad no valida. Debe estar entre 16 y 99 años.");
-
             System.out.print("Introduce tu edad: ");
             edad = teclado.nextInt();
         }
@@ -21,7 +21,16 @@ public class Examen {
             System.out.println("Es menor de edad");
         }
 
-        System.out.println("Edad valida para entrar en la fila.");
+        System.out.print("Introduce el numero de asignaturas matriculadas: ");
+        int asignaturas = teclado.nextInt();
+
+        while (asignaturas < 1) {
+            System.out.println("Numero de asignaturas no valido.");
+            System.out.print("Introduce el numero de asignaturas matriculadas: ");
+            asignaturas = teclado.nextInt();
+        }
+
+        System.out.println("Numero de asignaturas: " + asignaturas);
 
         teclado.close();
     }
