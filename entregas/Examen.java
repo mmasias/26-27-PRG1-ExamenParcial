@@ -27,6 +27,11 @@ class Examen {
             if (nmatriculas < 1 && nmatriculas > 10){
                 matriculasvalidas = true;
         }
+        while (nnotas == nmatriculas){
+            int i = 1;
+            System.out.println("Introduzca la nota de la asignatura" + i + ":" );
+            sc();
+        }
         
     }
 }
