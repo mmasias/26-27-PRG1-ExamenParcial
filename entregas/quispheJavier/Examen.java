@@ -34,14 +34,20 @@ public class Examen {
         int notaAsignatura = scanner.nextInt();
         System.out.println("Nota de la asignatura 1: " + notaAsignatura);
 
+
         double notaMedia = materiasMatriculadas / notaAsignatura;
         System.out.println("Nota media: " + notaMedia);
 
+
+        int materiasDesaprobadas = 0;
         if (notaMedia > 5) {
             System.out.println("Materia aprobada");
         } else {
             System.out.println("Materia desaprobada");
+            materiasDesaprobadas++;
         }
+
+        System.out.println("Cantidad de materias suspensas: " + materiasDesaprobadas);
 
     }
 }
