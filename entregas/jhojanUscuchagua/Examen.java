@@ -38,6 +38,7 @@ class Examen {
         double MediaDeNotas;
         double SumatoriaNotas= 0;
         int AsignaturasAprobadas = 0;
+        int AsignaturasSuspensas = 0;
         int NOTA_APROBATORIA= 5;
         for (int i = 1; i<=numeroDeAsignaturas; i++) {
             System.out.println("¿Cuantos notas tiene en la asignatura" + i);
@@ -45,6 +46,8 @@ class Examen {
 
             if (notasPorAsignatura>=NOTA_APROBATORIA) {
                 AsignaturasAprobadas = AsignaturasAprobadas + 1;
+            } else {
+                AsignaturasSuspensas= AsignaturasSuspensas + 1;
             }
 
             SumatoriaNotas = SumatoriaNotas + notasPorAsignatura;
@@ -53,5 +56,6 @@ class Examen {
 
         System.out.println("la media de notas es:" + MediaDeNotas);
         System.out.println("Asignaturas aprobadas:" + AsignaturasAprobadas);
+        System.out.println("Asignaturas suspensas:" + AsignaturasSuspensas);
     }
 }
