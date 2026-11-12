@@ -51,8 +51,7 @@ public class Examen {
 
         // Asignaturas aprobadas con notas de 5 o mas
         int asignaturas_aprobadas = 0;
-        int asignaturas_desaprobadas 0;
+        int asignaturas_desaprobadas = 0;
 
-        
     }
 }
