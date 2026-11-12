@@ -44,5 +44,10 @@ class Examen {
             }
         }
 
+        for (int i=0; i < numeroAsignaturas; i++) {
+            System.out.println("Nota de la asignatura " + i + ":");
+            int notaAsignatura = scanner.nextInt();
+        }
+
     }
 }
