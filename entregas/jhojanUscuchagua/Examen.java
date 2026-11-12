@@ -1,9 +1,6 @@
-
 import java.util.Scanner;
-import javax.print.attribute.standard.Media;
 
 class Examen {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Examen parcial PRG1");
@@ -40,14 +37,21 @@ class Examen {
         
         double MediaDeNotas;
         double SumatoriaNotas= 0;
+        int AsignaturasAprobadas = 0;
+        int NOTA_APROBATORIA= 5;
         for (int i = 1; i<=numeroDeAsignaturas; i++) {
             System.out.println("¿Cuantos notas tiene en la asignatura" + i);
             int notasPorAsignatura = scanner.nextInt();
+
+            if (notasPorAsignatura>=NOTA_APROBATORIA) {
+                AsignaturasAprobadas = AsignaturasAprobadas + 1;
+            }
 
             SumatoriaNotas = SumatoriaNotas + notasPorAsignatura;
         }
         MediaDeNotas = SumatoriaNotas/numeroDeAsignaturas;
 
         System.out.println("la media de notas es:" + MediaDeNotas);
+        System.out.println("Asignaturas aprobadas:" + AsignaturasAprobadas);
     }
 }
