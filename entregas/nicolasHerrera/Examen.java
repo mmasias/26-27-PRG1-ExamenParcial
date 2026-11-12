@@ -2,19 +2,31 @@ package entregas.nicolasHerrera;
 
 import java.util.Scanner;
 
+
+// HECHO POR NICOLAS HERRERA BARRETO
+
+
 public class Examen {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // final int MAYOR_DE_EDAD = 18;
+        int minimo_edad = 17;
+        int maximo_edad = 70;
+
         System.out.println("Dime tu edad:");
         int edad = scanner.nextInt();
-        final int MAYORD_DE_EDAD = 18;
 
+        // String ComprobadorEdad = (edad >= MAYOR_DE_EDAD) ? "Eres mayor de edad" : "Eres menor de edad";
+        // System.out.println(ComprobadorEdad);20
 
-        String ComprobadorEdad = (edad >= MAYORD_DE_EDAD) ? "Eres mayor de edad" : "Eres menor de edad";
-
-        System.out.println(ComprobadorEdad);
-
+        while (minimo_edad <= edad && edad <= maximo_edad) {
+            System.out.println("Dime una ultimatu edad:");
+            edad = scanner.nextInt();
+            System.out.println("Tu edad está dentro del rango permitido.");
+            break;   
+        }
+        
         scanner.close();
     }
 }
