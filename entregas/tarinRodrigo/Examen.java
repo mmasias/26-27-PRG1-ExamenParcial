@@ -6,6 +6,8 @@ public class Examen {
         final int MAYOR_DE_EDAD = 18;
         final int EDAD_MINIMA = 17;
         final int EDAD_MAXIMA = 70;
+        final int ASIGNATURAS_MAX = 10;
+        final int ASIGNATURAS_MIN = 1;
 
         System.out.println("Examen parcial PRG1");
 
@@ -19,7 +21,13 @@ public class Examen {
 
         System.out.println(edad >= MAYOR_DE_EDAD ? "Es mayor de edad" : "Es menor de edad");
         
-        System.out.println("En cuantas asignaturas estas matriculado");
+        System.out.println("En cuantas asignaturas estas matriculado: ");
+        int matriculas = scanner.nextInt();
+
+        if (matriculas < ASIGNATURAS_MIN || matriculas > ASIGNATURAS_MAX) {
+            System.out.println("No esta dentro del rango (1-10). Vuelve a intentar: ");
+            matriculas = scanner.nextInt();
+        }
         scanner.close();
     }
 }
