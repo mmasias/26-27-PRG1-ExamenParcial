@@ -1,5 +1,10 @@
 public class Examen.java {
-    public static void main(String[] args) {
-        System.out.println("Examen parcial PRG1");
-    }
-}
+   
+    java.until.Scanner
+   
+    scanner = new scaner;
+    
+    Scaner edad=scanner;
+    
+    int edad=19
+    {
