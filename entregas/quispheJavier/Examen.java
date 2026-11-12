@@ -14,16 +14,16 @@ public class Examen {
         } else {
             System.out.println("Es menor de edad");
         }
-
-        if (edadAlumno > 17 || edadAlumno > 70) {
-            System.out.println("Es válida");
+        boolean edadValida = true;
+        if(edadAlumno > 17 || edadAlumno < 70) {
+            System.out.println("Edad inválida");
+            edadValida = false;
         } else {
-            System.out.println("No es válida");
+            System.out.println("Edad válida");
         }
 
         System.out.println("¿En cuántas materias está matriculado?");
         int materiasMatriculadas = scanner.nextInt();
-
         if (materiasMatriculadas > 1 || materiasMatriculadas < 10) {
             System.out.println("Cantidad de materias válida");
         } else {
@@ -33,12 +33,16 @@ public class Examen {
 
         final int MINIMO_DE_NOTA = 0;
         final int MAXIMO_DE_NOTA = 10;
+        boolean notaValida = true;
         System.out.println("Dime las notas de cada asignatura"); 
         int notaAsignatura = scanner.nextInt();
         System.out.println("Nota de la asignatura 1: " + notaAsignatura);
-        if (notaAsignatura > MINIMO_DE_NOTA || notaAsignatura > MAXIMO_DE_NOTA) {
+        if (notaAsignatura < MINIMO_DE_NOTA || notaAsignatura > MAXIMO_DE_NOTA) {
             System.out.println("Nota inválida");
-        } 
+            notaValida = false;
+        } else {
+            System.out.println("Nota válida");
+        }
 
 
 
