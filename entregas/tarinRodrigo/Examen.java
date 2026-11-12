@@ -19,6 +19,7 @@ public class Examen {
 
         System.out.println(edad >= MAYOR_DE_EDAD ? "Es mayor de edad" : "Es menor de edad");
         
+        System.out.println("En cuantas asignaturas estas matriculado");
         scanner.close();
     }
 }
